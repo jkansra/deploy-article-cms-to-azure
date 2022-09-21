@@ -5,21 +5,21 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'ENTER_STORAGE_ACCOUNT_NAME'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'ENTER_BLOB_STORAGE_KEY'
-    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'ENTER_IMAGES_CONTAINER_NAME'
+    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'udacitystorageaccount'
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'rUeZyOG5GROXbgzfeLAW1Qjqxqeh6Fxrkpo69Hsipb7wBxqSu7XctCgBt4sdtp7Atcfrr1DMxfWO+AStQTdwbQ=='
+    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'udacity-server.database.windows.net'
     SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'udacity-project-db'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityadmin'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Udacity@1'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
-    SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
+    SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE + '?driver=ODBC+Driver+18+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     ### Info for MS Authentication ###
     ### As adapted from: https://github.com/Azure-Samples/ms-identity-python-webapp ###
-    CLIENT_SECRET = "2yo8Q~lidVU0VgyNP3ERW4NsxysiSTLY2K2N0cGD"
+    CLIENT_SECRET = "wSD8Q~IKJC9we8tOy13mLsqPlveF-NQGxjBSdaE8"
     # In your production app, Microsoft recommends you to use other ways to store your secret,
     # such as KeyVault, or environment variable as described in Flask's documentation here:
     # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
