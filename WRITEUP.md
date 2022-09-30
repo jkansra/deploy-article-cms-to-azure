@@ -8,11 +8,19 @@
 - *Justify your choice*
 
 
-I chose App service for the CMS app as :
-1. VMs are more expensive
-2. They can be more time consuming for the developer than other compute options
-3. App service has high availability, auto-scaling, and support of both Linux and Windows environments.
-4. The hardware limitations and limited access to the host server does not affect my needs for the application
+APP SERVICE: 
+ If we analyse the factors - costs, scalability and availability, App service will be less expensive and for an application like this, which is lightweight, it is easy for an app service to handle all this.
+ Even if the app service has regular payment thing, when the user is not even using it, still an application like this wont make a difference. 
+
+ Attaching your app service with github, gives us a smooth deployment process as well. A new commit push automatically updates the server as well.
+
+
+ VIRTUAL MACHINE:
+Virtual machine is also a very good option, but I think it needs to be 
+App service are less expensive than Virtual Machines. As it is not a heavy app and VMs can be utilized properly if we need high compute options. If we add new features, then the app service will be costly for us. 
+
+
+So, in conclusion, I would choose App Service over VM as it is a simple app. It does not require any complexities. Analysing all the factors, the App service looks like a straight choice.
 
 
 ### Assess app changes that would change your decision.
